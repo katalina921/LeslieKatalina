@@ -21,16 +21,16 @@ class Database {
             die("<p>Error: " . $this->connection->connect_error . "</p>");
         }
 
-        $exists = $this->connection->select_db($database);
+        $exsist = $this->connection->select_db($database);
 
-        if (!$exists) {
+        if (!$exsist) {
             $query = $this->connection->query("CREATE DATABASE $database");
 
             if ($query) {
-                echo "<p>Successfully created database" . $database . "</p>";
+                echo"<p>Successfully created database: " . $database . "</p>";
             }
         } else {
-            echo "<p>Database already exists.</p>";
+            echo "<p>Database already exsists.</p>";
         }
     }
 
@@ -42,25 +42,26 @@ class Database {
         }
     }
 
-    public function closeConnecion() {
-        if(isset($this->connection)){
+    public function closeConnection() {
+        //isset check if a variable has ben set or not; checking if
+        // there is something within the variable
+        if (isset($this->connection)) {
             $this->connection->close();
         }
     }
 
     public function query($string) {
         $this->openConnection();
-        
+
         $query = $this->connection->query($string);
         
-        if(!$query){
+        if($query) {
             $this->error = $this->connection->error;
         }
-        
-        $this->closeConnecion();
-        
+
+        $this->closeConnection();
+
         return $query;
     }
 
 }
-

@@ -57,7 +57,7 @@ game.PlayScreen = me.ScreenObject.extend({
         
         resetPlayer: function(x, y){
              //pulling the player and setiing where he will show up
-                game.data.player = me.pool.pull("player", x, y, {});
+                game.data.player = me.pool.pull("pewds", x, y, {});
                 me.game.world.addChild(game.data.player, 10);
                 game.data.miniPlayer = me.pool.pull("minimap", 10, 10, {});
                 me.game.world.addChild(game.data.miniPlayer, 31);

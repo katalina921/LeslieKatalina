@@ -15,14 +15,14 @@ game.PlayerEntity = me.Entity.extend({
     
     setSuper: function(x, y) {
         this._super(me.Entity, 'init', [x, y, {
-                image: "player",
-                width: 64,
-                height: 64,
+                image: "pewds",
+                width: 360,
+                height: 360,
                 //size of the image
-                spritewidth: "64",
-                spriteheight: "64",
+                spritewidth: "360",
+                spriteheight: "360",
                 getShape: function() {
-                    return(new me.Rect(0, 0, 64, 64)).toPolygon();
+                    return(new me.Rect(0, 0, 360, 360)).toPolygon();
                 }
             }]);
     },
@@ -49,9 +49,9 @@ game.PlayerEntity = me.Entity.extend({
     },
     
     addAnimation: function() {
-        this.renderable.addAnimation("idle", [78]);
-        this.renderable.addAnimation("walk", [117, 118, 119, 120, 121, 122, 123, 124, 125], 80);
-        this.renderable.addAnimation("attack", [65, 66, 67, 68, 69, 70, 71, 72], 80);
+        this.renderable.addAnimation("idle", [0]);
+        this.renderable.addAnimation("walk", [ 2, 3, 4, 5], 80);
+//        this.renderable.addAnimation("attack", [65, 66, 67, 68, 69, 70, 71, 72], 80);
     },
     
     //delta - change in time
@@ -98,13 +98,13 @@ game.PlayerEntity = me.Entity.extend({
         //by me.time.tick makes the movement look smooth
         this.body.vel.x += this.body.accel.x * me.timer.tick;
         this.facing = "right";
-        this.flipX(true);
+        this.flipX(false);
     },
     
     moveLeft: function() {
         this.body.vel.x -= this.body.accel.x * me.timer.tick;
         this.facing = "left";
-        this.flipX(false);
+        this.flipX(true);
     },
     
     jump: function() {

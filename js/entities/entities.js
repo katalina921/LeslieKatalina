@@ -1,4 +1,4 @@
-//############################################################## P L A Y E R  E N T I T Y #######################################################################
+//#################################################### P L A Y E R  E N T I T Y #######################################################################
 game.PlayerEntity = me.Entity.extend({
 //constructor
     init: function(x, y, settings) {
@@ -16,13 +16,13 @@ game.PlayerEntity = me.Entity.extend({
     setSuper: function(x, y) {
         this._super(me.Entity, 'init', [x, y, {
                 image: "pewds",
-                width: 360,
-                height: 360,
+                width: 110,
+                height: 70,
                 //size of the image
-                spritewidth: "360",
-                spriteheight: "360",
+                spritewidth: "110",
+                spriteheight: "70",
                 getShape: function() {
-                    return(new me.Rect(0, 0, 360, 360)).toPolygon();
+                    return(new me.Rect(0, 0, 70, 110)).toPolygon();
                 }
             }]);
     },
@@ -50,7 +50,7 @@ game.PlayerEntity = me.Entity.extend({
     
     addAnimation: function() {
         this.renderable.addAnimation("idle", [0]);
-        this.renderable.addAnimation("walk", [ 2, 3, 4, 5], 80);
+        this.renderable.addAnimation("walk", [ 4, 5, 6, 7, 8, 9, 10], 80);
 //        this.renderable.addAnimation("attack", [65, 66, 67, 68, 69, 70, 71, 72], 80);
     },
     

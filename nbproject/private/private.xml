@@ -4,8 +4,10 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/xampp/htdocs/LeslieKatalina/js/screens/play.js</file>
-            <file>file:/C:/xampp/htdocs/LeslieKatalina/js/entities/PlayerBaseEntity.js</file>
+            <file>file:/C:/xampp/htdocs/LeslieKatalina/js/screens/title.js</file>
             <file>file:/C:/xampp/htdocs/LeslieKatalina/js/resources.js</file>
+            <file>file:/C:/xampp/htdocs/LeslieKatalina/js/entities/EnemyCreep.js</file>
+            <file>file:/C:/xampp/htdocs/LeslieKatalina/index.php</file>
             <file>file:/C:/xampp/htdocs/LeslieKatalina/js/game.js</file>
             <file>file:/C:/xampp/htdocs/LeslieKatalina/js/entities/entities.js</file>
         </group>

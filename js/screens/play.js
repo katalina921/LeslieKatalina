@@ -6,7 +6,7 @@ game.PlayScreen = me.ScreenObject.extend({
 		// reset the score
 		game.data.score = 0;
                 //teliing it what to look at as far as maps
-                me.levelDirector.loadLevel("level101");
+                me.levelDirector.loadLevel("level1");
                 
                 this.resetPlayer(10, 0);
                 
@@ -27,9 +27,7 @@ game.PlayScreen = me.ScreenObject.extend({
                 //adding the player to the world
                 me.game.world.addChild(spendGold, 0);
                 
-                game.data.minimap = me.pool.pull("minimap", 10, 10, {});
-                me.game.world.addChild(game.data.minimap, 30);
-                
+       
                 //bind key for movement
                 me.input.bindKey(me.input.KEY.B, "buy");
                 me.input.bindKey(me.input.KEY.Q, "skill1");
@@ -59,7 +57,7 @@ game.PlayScreen = me.ScreenObject.extend({
              //pulling the player and setiing where he will show up
                 game.data.player = me.pool.pull("pewds", x, y, {});
                 me.game.world.addChild(game.data.player, 10);
-                game.data.miniPlayer = me.pool.pull("minimap", 10, 10, {});
+              
                 me.game.world.addChild(game.data.miniPlayer, 31);
         }
 });
